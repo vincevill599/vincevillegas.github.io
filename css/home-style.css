@@ -26,7 +26,7 @@ header {
 .header-logo:hover {
     text-shadow:
         0 0 0.125rem #fff,
-        0 0 0.45em rgb(248, 103, 103);
+        0 0 0.45em #FF00FF;
 }
 
 .header-logo:hover::before {
@@ -41,13 +41,14 @@ header {
     width: 100%;
     height: 100%;
 
-    background: rgb(248, 103, 103);
+    background: #FF00FF;
     transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
     filter: blur(2em);
 }
 
-.header-logo span {
-    color: rgb(248, 103, 103);
+.header-logo span,
+.leni {
+    color: #FF00FF !important;
 }
 
 .sticky {
@@ -146,6 +147,12 @@ header li {
     .burger {
         display: block;
     }
+
+    .portfolio-image {
+        width: 80%;
+        height: 95%;
+        margin: 4px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -153,6 +160,12 @@ header li {
     .portfolio-2,
     .portfolio-3 {
         display: none;
+    }
+    
+    .portfolio-image {
+        width: 80%;
+        height: 95%;
+        margin: 16px;
     }
 }
 
@@ -436,12 +449,6 @@ header li {
     justify-content: center;
 }
 
-.portfolio-image {
-    width: 80%;
-    height: 95%;
-    margin: 4px;
-}
-
 .keri-website {
     width: 100% !important;
     height: 100% !important;
@@ -450,6 +457,12 @@ header li {
 .portfolio-description {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-item.active {
+    display: flex;
+    justify-content: center;
 }
 
 .portfolio-subtitle span {
@@ -646,4 +659,11 @@ a:hover {
 
 *:focus {
     outline: 0;
+}
+
+.version {
+    position: fixed;
+    color: #191a1d;
+    bottom: 8px;
+    right: 8px;
 }
